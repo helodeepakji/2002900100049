@@ -1,5 +1,7 @@
+import { NavLink } from 'react-router-dom';
 import './TrainSchedule.css';
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
+
 
 function TrainSchedule() {
   const [train, setTrain] = useState([]);
@@ -39,7 +41,9 @@ function TrainSchedule() {
           <tbody>
             {train.map((trainItem) => (
               <tr key={trainItem.train_id}>
-                <td>{trainItem.train_id}</td>
+                <td>
+                  <NavLink to={`/${trainItem.train_id}`}>{trainItem.train_id}</NavLink>
+                </td>
                 <td>{trainItem.train_name}</td>
                 <td>{trainItem.seats_available}</td>
                 <td>{trainItem.ticket_price}</td>
