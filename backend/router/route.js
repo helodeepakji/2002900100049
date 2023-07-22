@@ -11,7 +11,7 @@ var traindata = [
         "arrival_time": "12:30 PM",
         "duration": "3 hours 30 minutes",
         "seats_available": 120,
-        "ticket_price": "$50"
+        "ticket_price": "RS. 1050"
       },
       {
         "train_id": "TR456",
@@ -22,7 +22,7 @@ var traindata = [
         "arrival_time": "05:45 PM",
         "duration": "3 hours 30 minutes",
         "seats_available": 80,
-        "ticket_price": "$60"
+        "ticket_price": "RS. 1060"
       },
       {
         "train_id": "TR789",
@@ -33,7 +33,7 @@ var traindata = [
         "arrival_time": "10:30 AM",
         "duration": "2 hours 30 minutes",
         "seats_available": 200,
-        "ticket_price": "$30"
+        "ticket_price": "RS. 1030"
       }
     ]
 
@@ -49,8 +49,7 @@ var traindata = [
     });
     
     router.get('/api/train/:trainno',(req,res)=>{
-        const trainno = req.params.trainno;
-        const trainNumber = trainno;
+        const trainNumber = req.params.trainno;
         const trainDetails = findTrainByNumber(trainNumber);
         
     if (trainDetails) {
